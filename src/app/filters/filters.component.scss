@@ -1,0 +1,52 @@
+.filter {
+  width: 900px;
+  min-height: 10vh;
+  background-color: white;
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 10px;
+  color: #979db0;
+  font-family: 'Poppins', sans-serif;
+
+  input {
+    padding: 1rem;
+  }
+  input[type="text"] {
+    width: 220px;
+    margin-right: 10px;
+    border: none;
+    font-size: 1rem;
+    color: #979db0;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  i {
+    color: #667db6;
+  }
+
+  input[type="text"]:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.checkbox {
+  cursor: pointer;
+  justify-content: flex-start;
+  input {
+    padding: 1rem;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+  label {
+    margin-right: 20px;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+

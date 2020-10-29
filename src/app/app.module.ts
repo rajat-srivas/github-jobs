@@ -7,14 +7,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { JobCardComponent } from './job-card/job-card.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { FiltersComponent } from './filters/filters.component';
+import { JobFeedComponent } from './job-feed/job-feed.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
       DashboardComponent,
       JobCardComponent,
       JobDetailsComponent,
-      FiltersComponent
+      FiltersComponent,
+      JobFeedComponent,
+      HeaderComponent
    ],
   imports: [
     BrowserModule,

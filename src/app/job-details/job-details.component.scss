@@ -1,0 +1,151 @@
+.jobdetail {
+  width: 100%;
+  height: auto;
+  margin-bottom: 4rem;
+  .company {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    width: 700px;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    .image {
+      flex: 1;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    .details {
+      flex: 3;
+      h2 {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-weight: 600;
+        color: black;
+        font-size: 1.5rem;
+      }
+      h3 {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-weight: 400;
+        color: #979db0;
+        font-size: 1rem;
+      }
+    }
+
+    button {
+      background-color: whitesmoke;
+      padding: 1rem 1.2rem;
+      margin-right: 1rem;
+      color: #4283c9;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      font-weight: 500;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  .job {
+    background: white;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    .header {
+      width: 700px;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+      .timing {
+        span {
+          font-size: 14px;
+          margin-right: 10px;
+          color: #979db0;
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 1.2rem;
+        }
+        p {
+          margin-block-start: 0em;
+          color: #667db6;
+          font-size: 12px;
+        }
+      }
+
+      .blueBtn {
+        width: 150px;
+      }
+    }
+    .text {
+      padding: 1rem 2rem;
+
+      p {
+        color: #8d94a9;
+      }
+    }
+
+    .apply {
+      h2 {
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+      span {
+        font-size: 0.8rem;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      padding: 2rem;
+      color: white;
+      background: url(../../assets/Cornered-Stairs.svg);
+
+      // background: #667db6; /* fallback for old browsers */
+      // background: -webkit-linear-gradient(
+      //   to left,
+      //   #667db6,
+      //   #0082c8,
+      //   #0082c8,
+      //   #667db6
+      // ); /* Chrome 10-25, Safari 5.1-6 */
+      // background: linear-gradient(
+      //   to left,
+      //   #667db6,
+      //   #0082c8,
+      //   #0082c8,
+      //   #667db6
+      // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      // /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  }
+}
+
+.applynow {
+  width: 100%;
+  background: white;
+
+.footer {
+  padding: 1rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 80%;
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: .9rem;
+    color: #8d94a9;
+    font-weight: 500;
+  }
+  button {
+    width: 150px;
+  };
+}
+
+}
