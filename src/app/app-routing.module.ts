@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'home', component: JobFeedComponent
   },
   {
-    path: 'home/:id', component: JobDetailsComponent
+    path: 'detail', component: JobDetailsComponent
   }
 ];
 

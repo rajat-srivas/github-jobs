@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Job } from './../_models/Job';
 
 @Component({
   selector: 'app-job-card',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./job-card.component.scss']
 })
 export class JobCardComponent implements OnInit {
-
+@Input('jobItem') job: Job;
   constructor() { }
 
   ngOnInit() {

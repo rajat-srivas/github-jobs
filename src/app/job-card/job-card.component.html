@@ -1,10 +1,21 @@
-<div class="jobcard flex">
-  <img src="../../assets/sapientpng.png" alt="Company Logo">
-  <div class="timing">
-    <span>5h ago .</span>
-    <span>Full Time</span>
+
+<div class="jobcard">
+
+  <div class="logo">
+    <img src='{{job.company_logo}}' alt="Company Logo">
+
   </div>
-  <h3>Senior Software Engineer</h3>
-  <h4>Publicis Sapient</h4>
-  <p>Remote, Seoule, Tokyo, Mountain View San Fransisco</p>
+ <div class="text">
+ <h3>{{job.title}}</h3>
+  <h4>{{job.company}}</h4>
+  <p>{{job.location}}</p>
+ </div>
+
+   <div class="timing">
+    <span>{{job.created_at | date:'fullDate'}}</span>
+  </div>
+  <span  [ngClass] = "{'remote' : job.type == 'Remote',
+'full' : job.type == 'Full Time'}"
+   class="type" >{{job.type}}</span>
+
 </div>

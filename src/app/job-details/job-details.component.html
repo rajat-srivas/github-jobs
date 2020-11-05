@@ -2,13 +2,13 @@
   <div class="jobdetail">
     <div class="company flex">
       <div class="image">
-        <img src="../../assets/sapientpng.png" alt="">
+        <img src='{{jobHere.company_logo}}' alt="">
       </div>
       <div class="details">
-        <h2>Publicis Sapient</h2>
-        <h3>Some other detail</h3>
+        <h2>{{jobHere.company}}</h2>
+        <h3>{{jobHere.location}}</h3>
       </div>
-      <button type="button">Company Site</button>
+      <a href={{jobHere.company_url}}  target="_blank" class="companySite" type="button">Company Site</a>
     </div>
     <div class="job">
       <div class="header flex">
