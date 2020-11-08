@@ -8,7 +8,6 @@ import { JobCardComponent } from './job-card/job-card.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { FiltersComponent } from './filters/filters.component';
 import { JobFeedComponent } from './job-feed/job-feed.component';
-import { HeaderComponent } from './header/header.component';
 import {HttpClientModule} from '@angular/common/http'
 import { GitHubJobService } from './_services/GitHubJob.service';
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -22,7 +21,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
       JobDetailsComponent,
       FiltersComponent,
       JobFeedComponent,
-      HeaderComponent
    ],
   imports: [
   BrowserModule,

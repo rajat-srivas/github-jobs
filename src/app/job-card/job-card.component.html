@@ -1,21 +1,10 @@
-
 <div class="jobcard">
-
-  <div class="logo">
+    <div class="back"></div>
     <img src='{{job.company_logo}}' alt="Company Logo">
-
-  </div>
- <div class="text">
- <h3>{{job.title}}</h3>
-  <h4>{{job.company}}</h4>
-  <p>{{job.location}}</p>
- </div>
-
-   <div class="timing">
+    <h3>{{job.title}}</h3>
+    <h4>{{job.company}}</h4>
+    <p>{{job.location}}</p>
     <span>{{job.created_at | date:'fullDate'}}</span>
-  </div>
-  <span  [ngClass] = "{'remote' : job.type == 'Remote',
-'full' : job.type == 'Full Time'}"
-   class="type" >{{job.type}}</span>
-
+  <span [ngClass]="{'remote' : job.type == 'Contract',
+'full' : job.type == 'Full Time'}" class="type">{{job.type}}</span>
 </div>

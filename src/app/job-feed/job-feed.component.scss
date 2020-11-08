@@ -1,61 +1,70 @@
-.jobsfeed {
-  width: 1100px;
+.jobs {
   min-height: 80vh;
   margin: 0 auto;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
   display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  padding: 3rem;
-  grid-row-gap: 50px;
-  grid-column-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  app-job-card {
+    margin-top: 3rem;
+    margin-right: 2rem;
+  }
 }
 
-@media screen and (max-width : 900px)
+@media only screen and (max-width: 600px)
 {
-  .jobsfeed {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .jobs {
+    grid-template-columns: 1fr;
   }
 }
 
-  button {
-    padding: 0.8rem 2rem;
-   border-radius: 5px;
-   margin-left: 50%;
-   transform: translateX(-50%);
-   margin-bottom: 3rem;
-    border: none;
-    width: 150px;
-    color: white;
-    font-family: "Poppins", sans-serif;
-
-    cursor: pointer;
-    background: #667db6; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to left,
-      #667db6,
-      #0082c8,
-      #0082c8,
-      #667db6
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to left,
-      #667db6,
-      #0082c8,
-      #0082c8,
-      #667db6
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@media only screen and (max-width: 1000px)
+{
+  .jobs {
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  button:hover {
-    filter: brightness(90%);
-  }
 
-  button:active, button:focus {
-    outline: none;
-  }
 
+
+button {
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 3rem;
+  border: none;
+  width: 150px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+  background: #667db6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+button:active,
+button:focus {
+  outline: none;
+}

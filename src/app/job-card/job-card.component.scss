@@ -1,89 +1,79 @@
 .jobcard {
-  width: 520px;
-  height: 160px;
-
   display: flex;
   align-items: center;
-  position: relative;
-  background-color: white;
+  align-content: center;
+  flex-direction: column;
+  width: 20rem;
+  height: 20rem;
+  background-color: whitesmoke;
   border-radius: 10px;
-  cursor: pointer;
+  position: relative;
+  .back {
+    min-height: 8rem;
+    color: black;
+    background-size: cover;
+    min-width: 100%;
+    background: url(../../assets/Cornered-Stairs.svg);
 
-
-  .logo {
-    padding: 5px;
-    width: 130px;
-    height: 130px;
-    overflow: hidden;
-    margin-right: 20px;
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+  }
+  img {
+    max-width: 5rem;
+    max-height: 5rem;
+    min-width: 5rem;
+    min-height: 5rem;
+    position: relative;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-top: -4rem;
+    z-index: 2;
+    border: 8px solid whitesmoke;
+    background-color: whitesmoke;
+  }
+  h3,
+  h4,
+  p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
   }
 
-.text {
-  margin-bottom: 1rem;
-  flex-basis: 300px;
-}
-  .timing {
-    justify-self: end;
-    align-self: flex-end;
-    padding: 10px;
-    span {
-      display: block;
-      font-size: 12px;
-      color: #979db0;
-    }
-  }
   h3 {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  h4 {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    font-weight: 500;
-    color: #979db0;
     font-size: 1rem;
   }
 
-  p {
+  h4 {
     font-size: 0.8rem;
-    color: #667db6;
-    font-weight: 500;
   }
-}
 
-.jobcard:hover {
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow:  20px 20px 60px #d9d9d9,
-               -20px -20px 60px #ffffff;
-}
+  p {
+    font-size: 0.9rem;
+  }
 
+  span {
+    font-size: 0.6rem;
+  }
 
-.type{
-  position: absolute;
-  top: 5%;
-  right: 1%;
-  font-size: 12px;
-  padding:5px 10px;
-  color: white;
-  border-radius: 5px;
-}
+  .type {
+    padding: 5px 10px;
+    // background: #faa275;
+color: black;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    justify-self: end;
+    position: absolute;
+    right: 2%;
+  }
 
-.full {
-  background: #394867;
-}
+  .remote {
+    background: #ef6461;
+color: white;
+  }
 
-.remote {
-  background: #9ba4b4;
+  .full {
+    background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
+  }
 }
