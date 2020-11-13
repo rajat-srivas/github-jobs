@@ -1,34 +1,18 @@
+
 .jobs {
   min-height: 80vh;
   margin: 0 auto;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
+  margin-top: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
+  justify-content: center;
+    align-items: center;
   app-job-card {
     margin-top: 3rem;
-    margin-right: 2rem;
+    justify-self: center;
   }
 }
-
-@media only screen and (max-width: 600px)
-{
-  .jobs {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media only screen and (max-width: 1000px)
-{
-  .jobs {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-
-
 
 button {
   padding: 0.8rem 2rem;
@@ -36,32 +20,22 @@ button {
   margin-left: 50%;
   transform: translateX(-50%);
   margin-bottom: 3rem;
+  margin-top: 2rem;
   border: none;
   width: 150px;
   color: white;
   font-family: "Poppins", sans-serif;
 
   cursor: pointer;
-  background: #667db6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #667db6,
-    #0082c8,
-    #0082c8,
-    #667db6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #667db6,
-    #0082c8,
-    #0082c8,
-    #667db6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  filter: brightness(80%);
+  background: #1AA88F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #1AA88F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #1AA88F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 button:hover {
-  filter: brightness(90%);
+  filter: brightness(70%);
 }
 
 button:active,

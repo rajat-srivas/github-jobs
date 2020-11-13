@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0rem 1rem;
 }
@@ -30,7 +30,7 @@ h1, h2, h3, h4 {
 }
 
 .blueBtn {
-  padding: 0.8rem 2rem;
+  padding: 0.4rem 2rem;
   border-radius: 5px;
   border: none;
   width: 120px;
@@ -38,26 +38,18 @@ h1, h2, h3, h4 {
   font-family: "Poppins", sans-serif;
 
   cursor: pointer;
-  background: #667db6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #667db6,
-    #0082c8,
-    #0082c8,
-    #667db6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #667db6,
-    #0082c8,
-    #0082c8,
-    #667db6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  filter: brightness(80%);
+  background: #1AA88F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #1AA88F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #1AA88F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .blueBtn:hover {
-  filter: brightness(90%);
+  filter: brightness(70%);
 }
 
 button:active, button:focus {

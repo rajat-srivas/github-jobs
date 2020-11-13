@@ -3,10 +3,6 @@
   <app-job-card (click)="GetJobDetail(item)" *ngFor="let item of jobService.jobsDetails" [jobItem]=item></app-job-card>
 </div>
 <button (click)="LoadMoreJobs()" type="button" class="loadmore">Load More</button>
-
-
-
-
 <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="small" color="#fff" type="line-scale" [fullScreen]="true">
   <p style="color: white"> Fetching Jobs..... </p>
 </ngx-spinner>
