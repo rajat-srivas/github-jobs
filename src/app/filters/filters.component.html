@@ -1,15 +1,19 @@
 <div class="filter flex">
   <div class="title flex boundary">
     <i class="fa fa-search" aria-hidden="true"></i>
-    <input  [(ngModel)]="title" type="text" placeholder="Filter by title, companies...">
+    <input  [(ngModel)]="title" type="text" placeholder="Title, companies...">
   </div>
   <div class="location flex boundary">
     <i class="fa fa-map-marker" aria-hidden="true"></i>
-    <input  [(ngModel)]="location" type="text" placeholder="Filter by location">
+    <input  [(ngModel)]="location" type="text" placeholder="Location">
   </div>
 <div class="checkbox flex">
   <input [(ngModel)]="fulltime" type="checkbox" name="Only Full time" id="fulltime">
   <label   for="fulltime">Full Time Only</label>
 </div>
-<button (click)="SearchJobs()" class="blueBtn" type="button">Search</button>
+<div class="buttons">
+  <button (click)="SearchJobs()" class="blueBtn" type="button">Search</button>
+  <button (click)="ClearJobs()" class="clearBtn" type="button">Clear</button>
+</div>
+
 </div>

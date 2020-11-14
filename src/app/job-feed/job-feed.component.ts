@@ -14,7 +14,9 @@ import { Subscriber } from 'rxjs';
 export class JobFeedComponent implements OnInit {
   constructor(private jobService: GitHubJobService, private route: Router, private spinner: NgxSpinnerService) {}
   hideLoadMore: boolean;
+  showNotFound = false;
   ngOnInit() {
+    this.showNotFound = false;
     if(!this.jobService.jobsDetails) {
      this.GetAllJobs();
     }
@@ -26,6 +28,7 @@ export class JobFeedComponent implements OnInit {
   }
 
   GetAllJobs() {
+    this.showNotFound = false;
     this.spinner.show();
     this.jobService.GetAllJobs().subscribe(
       (response) => {
@@ -53,17 +56,18 @@ export class JobFeedComponent implements OnInit {
     );
   }
 
-  // GetJobDetail(item) {
-  //   this.jobService.jobSelected = item as Job;
-  //   this.route.navigate(['/home', {id: this.jobService.jobSelected.id}]);
-  // }
-
   SearchJobs(event){
     this.spinner.show();
     this.hideLoadMore = true;
     this.jobService.SearchJobs(event).subscribe(
       (response) => {
           this.jobService.jobsDetails = response as Job[];
+          console.log('here');
+          console.log(this.jobService.jobsDetails);
+          if(this.jobService.jobsDetails.length == 0){
+            console.log('shownotfound');
+            this.showNotFound = true;
+          }
       },
       (error) => {
         this.spinner.hide();
@@ -74,5 +78,9 @@ export class JobFeedComponent implements OnInit {
         this.spinner.hide();
       }
     );
+  }
+
+  ClearSearchFilters() {
+      this.GetAllJobs();
   }
 }

@@ -7,6 +7,7 @@ import { FormsModule } from "@angular/forms";
 })
 export class FiltersComponent implements OnInit {
   @Output() SearchGithubJobs = new EventEmitter();
+  @Output() ClearSearchFilter = new EventEmitter();
   title: string;
   location: string;
   fulltime: boolean;
@@ -22,5 +23,11 @@ export class FiltersComponent implements OnInit {
     if (this.fulltime) queryString += "full_time=true";
     console.log(queryString);
     if (queryString.length > 0) this.SearchGithubJobs.emit(queryString);
+  }
+
+  ClearJobs() {
+    this.title = '';
+    this.location = '';
+    this.ClearSearchFilter.emit();
   }
 }
