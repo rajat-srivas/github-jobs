@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?'
+  baseUrl: 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions',
 };
 
 /*

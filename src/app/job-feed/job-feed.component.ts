@@ -51,8 +51,8 @@ export class JobFeedComponent implements OnInit {
     );
   }
 
-  GetJobDetail(item) {
-    this.jobService.jobSelected = item as Job;
-    this.route.navigate(["/detail"]);
-  }
+  // GetJobDetail(item) {
+  //   this.jobService.jobSelected = item as Job;
+  //   this.route.navigate(['/home', {id: this.jobService.jobSelected.id}]);
+  // }
 }

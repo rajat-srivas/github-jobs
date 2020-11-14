@@ -18,7 +18,7 @@ jobSelected: Job;
 constructor(private http: HttpClient) { }
 
 GetAllJobs() {
-  return this.http.get(this.baseUrl  + 'page=' + this.pageNumber + '&search=code');
+  return this.http.get(this.baseUrl + '.json?' + 'page=' + this.pageNumber + '&search=code');
 }
 
 SearchJobs(desc:string, full_time: boolean, location: string) {
@@ -26,6 +26,10 @@ SearchJobs(desc:string, full_time: boolean, location: string) {
   if(desc) url = url + 'description=' + desc + '&';
   if(full_time) url = url + 'full_time=' + full_time.valueOf.toString() + '&';
   return this.http.get(url);
+}
+
+GetJobById(id:string){
+  return this.http.get(this.baseUrl + '/' + id + '.json?markdown=true');
 }
 
 
