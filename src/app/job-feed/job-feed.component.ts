@@ -4,7 +4,6 @@ import { GitHubJobService } from "./../_services/GitHubJob.service";
 import { NgxSpinnerService } from "ngx-spinner";
 import { Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
-import { Console } from 'console';
 
 
 @Component({
