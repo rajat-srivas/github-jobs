@@ -21,11 +21,8 @@ GetAllJobs() {
   return this.http.get(this.baseUrl + '.json?' + 'page=' + this.pageNumber + '&search=code');
 }
 
-SearchJobs(desc:string, full_time: boolean, location: string) {
-  var url = this.baseUrl;
-  if(desc) url = url + 'description=' + desc + '&';
-  if(full_time) url = url + 'full_time=' + full_time.valueOf.toString() + '&';
-  return this.http.get(url);
+SearchJobs(query) {
+  return this.http.get(this.baseUrl + '.json?' + query);
 }
 
 GetJobById(id:string){

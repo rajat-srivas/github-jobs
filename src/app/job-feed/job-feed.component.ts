@@ -3,6 +3,8 @@ import { Job } from "../_models/Job";
 import { GitHubJobService } from "./../_services/GitHubJob.service";
 import { NgxSpinnerService } from "ngx-spinner";
 import { Router } from '@angular/router';
+import { Subscriber } from 'rxjs';
+import { Console } from 'console';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class JobFeedComponent implements OnInit {
   constructor(private jobService: GitHubJobService, private route: Router, private spinner: NgxSpinnerService) {}
-
+  hideLoadMore: boolean;
   ngOnInit() {
     if(!this.jobService.jobsDetails) {
      this.GetAllJobs();
@@ -33,6 +35,7 @@ export class JobFeedComponent implements OnInit {
         {
         console.log('concat');
           this.jobService.jobsDetails = [...this.jobService.jobsDetails, ...(response as Job[])];
+          this.hideLoadMore = false;
         }
         else {
           console.log('new');
@@ -55,4 +58,22 @@ export class JobFeedComponent implements OnInit {
   //   this.jobService.jobSelected = item as Job;
   //   this.route.navigate(['/home', {id: this.jobService.jobSelected.id}]);
   // }
+
+  SearchJobs(event){
+    this.spinner.show();
+    this.hideLoadMore = true;
+    this.jobService.SearchJobs(event).subscribe(
+      (response) => {
+          this.jobService.jobsDetails = response as Job[];
+      },
+      (error) => {
+        this.spinner.hide();
+        console.log(error);
+      },
+      () => {
+        console.log('ended');
+        this.spinner.hide();
+      }
+    );
+  }
 }
